@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-- Upgrade to Mortis Engine 0.1.8. The first incremental PR review checks the full diff and preserves open findings from encrypted review history. Subsequent reviews recheck previously reviewed Python importers when a module-level function is removed, switches between sync and async, or changes how existing calls bind arguments.
+## 0.2.4 - 2026-11-27
+
+Mortis Action now installs Mortis Engine 0.1.8. When upgrading from v0.2.3, keep your existing workflow permissions and `MORTIS_STATE_KEY`. The first incremental PR review checks the full diff to establish a fresh baseline and carries forward open findings from saved history.
+
+- Subsequent reviews recheck previously reviewed Python importers when a module-level function is removed, switches between sync and async, or changes how existing calls bind arguments. Adding a compatible optional parameter still allows reuse.
+- Reviews of deleted or renamed files find more callers in unchanged files, including package-relative and multiline Python imports, calls through aliases, and shell paths with escaped spaces.
 
 ## 0.2.3 - 2026-11-26
 
