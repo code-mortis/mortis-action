@@ -31,7 +31,7 @@ jobs:
       group: mortis-review-${{ github.event.pull_request.number || github.event.issue.number }}
       queue: max
     steps:
-      - uses: code-mortis/mortis-action@8958be81830c059c680bc293cdbf6724090b5f03 # v0.2.3
+      - uses: code-mortis/mortis-action@18ea3af2b07679bdc77df49b0016a4e826114dec # v0.2.4
         id: mortis
         with:
           provider: opencode-go

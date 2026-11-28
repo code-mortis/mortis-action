@@ -5,8 +5,8 @@ Run Mortis Engine on GitHub Actions for pull request reviews, branch comparisons
 ## Review pull requests
 
 1. Copy [the review workflow](.github/workflows/mortis-review.yml) to `.github/workflows/mortis-review.yml` on your default branch.
-2. Add the `MORTIS_API_KEY` repository secret and set the action's `provider` to an [Engine provider preset for the bundled workflow](https://pypi.org/project/mortis-engine/0.1.7/#connect-with-environment-variables). Set the `MORTIS_MODEL` repository variable if `mortis.toml` does not set a review model.
-3. Pin the action to a reviewed commit SHA. The bundled workflow pins v0.2.3, which installs Mortis Engine 0.1.7.
+2. Add the `MORTIS_API_KEY` repository secret and set the action's `provider` to an [Engine provider preset for the bundled workflow](https://pypi.org/project/mortis-engine/0.1.8/#connect-with-environment-variables). Set the `MORTIS_MODEL` repository variable if `mortis.toml` does not set a review model.
+3. Pin the action to a reviewed commit SHA. The bundled workflow pins v0.2.4, which installs Mortis Engine 0.1.8.
 
 **Public GitHub.com repositories.** Starting December 2, 2026, automatic reviews using `pull_request_target` require an applicable Actions event policy. In your repository or organization's workflow execution protections, allow that event specifically for `.github/workflows/mortis-review.yml`. Policy Insights shows which runs the default rule would block. To keep the default protection, retain the `issue_comment` trigger and have a maintainer post `/mortis review` in the PR conversation. [GitHub announcement](https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2/) · [Workflow execution settings](https://docs.github.com/en/actions/how-tos/administer/control-workflow-execution)
 
